@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Aranxita | Stray Kids Fanpage</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;500;700;900&family=Permanent+Marker&family=Nanum+Pen+Script&family=Rock+Salt&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FFC4D6', // Rosa Pastel
+              secondary: '#E0BBE4', // Lavanda Pastel
+              skzPink: '#FF9AA2', // Rosa Intenso Pastel
+              skzBlue: '#B5EAD7', // Menta/Azul Pastel
+              paper: '#FFFDF5', // Blanco crema cálido
+              ink: '#2D2A32', // Negro suave
+              accent: '#FFDAC1', // Melocotón
+              neon: '#CCFF00', // Amarillo Neón (ODDINARY vibe)
+              skzRed: '#FF3333', // Rojo intenso
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              kr: ['Noto Sans KR', 'sans-serif'],
+              marker: ['Permanent Marker', 'cursive'],
+              hand: ['Nanum Pen Script', 'cursive'],
+              scribble: ['Rock Salt', 'cursive'],
+              pixel: ['VT323', 'monospace'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'spin-slow': 'spin 8s linear infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'marquee': 'marquee 15s linear infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              }
+            },
+            backgroundImage: {
+              'dot-pattern': 'radial-gradient(#E5E7EB 1px, transparent 1px)',
+              'grid-pattern': 'linear-gradient(to right, #1f2937 1px, transparent 1px), linear-gradient(to bottom, #1f2937 1px, transparent 1px)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Noise Texture */
+      .bg-noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+      }
+      
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Washi Tape Pattern */
+      .bg-stripe {
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 5px,
+          rgba(255, 255, 255, 0.4) 5px,
+          rgba(255, 255, 255, 0.4) 10px
+        );
+      }
+
+      /* Cutout Effect */
+      .cutout-border {
+        clip-path: polygon(
+          2% 0%, 98% 0%, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0% 98%, 0% 2%
+        );
+      }
+      
+      /* CRT Screen Effect for AI */
+      .crt-screen {
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+        background-size: 100% 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@0.1.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#F0F0F0] bg-dot-pattern bg-[length:20px_20px] min-h-screen text-ink overflow-x-hidden selection:bg-skzPink selection:text-white font-sans">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
